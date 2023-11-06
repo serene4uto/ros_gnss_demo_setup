@@ -19,5 +19,3 @@ docker run -it \
     && cd .. \
     && colcon build "
 
-exit 0
-
