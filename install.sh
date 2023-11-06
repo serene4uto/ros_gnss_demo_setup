@@ -1,12 +1,11 @@
-docker run -it \
-    --name ros_gnss \
+docker run --name ros_gnss \
     -e DISPLAY=host.docker.internal:0.0 \
+    -it \
     --net=host \
     --privileged \
     -v /dev:/dev \
-    serene4utobot/gpsrtk:galactic-ubuntu20.04
-
-cd ~ && apt remove python3-pip -y \
+    serene4utobot/gpsrtk:galactic-ubuntu20.04 \
+    /bin/bash -c "cd ~ && apt remove python3-pip -y \
     && apt install wget -y \
     && wget https://bootstrap.pypa.io/get-pip.py \
     && python3 get-pip.py \
@@ -18,5 +17,5 @@ cd ~ && apt remove python3-pip -y \
     && git clone https://github.com/serene4uto/ublox_gnss_ros.git \
     && pip3 install -r ublox_gnss_ros/requirements.txt \
     && cd .. \
-    && colcon build
+    && colcon build "
 
