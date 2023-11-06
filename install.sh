@@ -1,6 +1,6 @@
-docker run --name ros_gnss \
+docker run -itd \
+    --name ros_gnss \
     -e DISPLAY=host.docker.internal:0.0 \
-    -it \
     --net=host \
     --privileged \
     -v /dev:/dev \
