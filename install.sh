@@ -13,10 +13,8 @@ docker exec -it ros_gnss bash -c "cd ~ && apt remove python3-pip -y \
     && pip install pyopenssl --upgrade \
     && mkdir -p ros_gnss_ws/src \
     && cd ros_gnss_ws/src \
-    && git clone https://github.com/serene4uto/rtcm_provider_ros.git \
-    && pip3 install -r rtcm_provider_ros/requirements.txt \
-    && git clone https://github.com/serene4uto/ublox_gnss_ros.git \
-    && pip3 install -r ublox_gnss_ros/requirements.txt \
+    && git clone -b eval https://github.com/serene4uto/ros_gnssrtk.git\
+    && pip3 install -r ros_gnssrtk/requirements.txt \
     && cd .. \
     && colcon build \
     && exit"
