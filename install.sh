@@ -1,9 +1,8 @@
 docker run -it \
     --name ros_gnss \
-    --net host \
+    -e DISPLAY=host.docker.internal:0.0 \
+    --net=host \
     --privileged \
-    -e DISPLAY=$DISPLAY \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v /dev:/dev \
     serene4utobot/gpsrtk:galactic-ubuntu20.04 \
     bash -c "cd ~ && apt remove python3-pip -y \
