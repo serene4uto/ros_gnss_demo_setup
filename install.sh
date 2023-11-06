@@ -1,12 +1,13 @@
-docker create -it \
+docker create -itd \
     --name ros_gnss \
     -e DISPLAY=host.docker.internal:0.0 \
     --net=host \
     --privileged \
     -v /dev:/dev \
     serene4utobot/gpsrtk:galactic-ubuntu20.04 
-    # \
-    # /bin/bash -c "cd ~ && apt remove python3-pip -y \
+
+docker start ros_gnss
+docker exec -it ros_gnss bash -c "cd ~ && apt remove python3-pip -y \
     # && apt install wget -y \
     # && wget https://bootstrap.pypa.io/get-pip.py \
     # && python3 get-pip.py \
