@@ -5,10 +5,8 @@ docker run -it --rm \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v /dev:/dev \
-    serene4utobot/gpsrtk:galactic-ubuntu20.04
-
-docker start ros_gnss
-docker exec -it ros_gnss bash -c "cd ~ && mkdir -p ros_gnss_ws/src \
+    serene4utobot/gpsrtk:galactic-ubuntu20.04 \
+    bash -c "cd ~ && mkdir -p ros_gnss_ws/src \
     && cd ros_gnss_ws/src \
     && git clone https://github.com/serene4uto/rtcm_provider_ros.git \
     && pip3 install -r rtcm_provider_ros/requirements.txt \
@@ -18,3 +16,4 @@ docker exec -it ros_gnss bash -c "cd ~ && mkdir -p ros_gnss_ws/src \
     && colcon build "
 
 exit 0
+
