@@ -6,9 +6,9 @@ docker run -it --rm \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v /dev:/dev \
     serene4utobot/gpsrtk:galactic-ubuntu20.04 \
-    bash -c "cd ~ && apt remove python3-pip  && wget https://bootstrap.pypa.io/get-pip.py \
+    bash -c "cd ~ && apt remove python3-pip && wget https://bootstrap.pypa.io/get-pip.py \
     && python3 get-pip.py \
-    & pip install pyopenssl --upgrade \
+    && pip install pyopenssl --upgrade \
     && mkdir -p ros_gnss_ws/src \
     && cd ros_gnss_ws/src \
     && git clone https://github.com/serene4uto/rtcm_provider_ros.git \
