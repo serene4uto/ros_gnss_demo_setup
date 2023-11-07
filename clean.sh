@@ -1,1 +1,1 @@
-rm -r build install log src
+rm -r ros_gnss_demo_setup
