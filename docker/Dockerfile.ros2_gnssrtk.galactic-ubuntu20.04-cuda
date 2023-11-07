@@ -1,0 +1,9 @@
+FROM serene4utobot/gpsrtk:galactic-ubuntu20.04-cuda
+
+RUN apt-get install wget -y
+
+RUN apt-get remove python3-pip -y \
+    && wget https://bootstrap.pypa.io/get-pip.py \
+    && python3 get-pip.py \
+    && pip install pyopenssl --upgrade
+
