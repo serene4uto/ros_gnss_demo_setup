@@ -1,1 +1,1 @@
-# ros_gnss_ws
+# Setup for ROS GNSS Demo
