@@ -1,1 +1,1 @@
-rm -r ros_gnss_demo_setup
+rm -r ros_gnss_ws
