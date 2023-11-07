@@ -1,5 +1,5 @@
-mkdir src
-cd src
+mkdir -p ros_gnss_ws/src
+cd ros_gnss_ws/src
 
 git clone https://github.com/serene4uto/rtcm_provider_ros.git
 pip3 install -r rtcm_provider_ros/requirements.txt

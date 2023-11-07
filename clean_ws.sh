@@ -1,0 +1,1 @@
+rm -r ros_gnss_ws  # Delete the workspace
