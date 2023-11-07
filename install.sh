@@ -2,10 +2,10 @@ ARCH=$(uname -m)
 
 if [[ $ARCH == *"aarch64"* ]]; then
   echo "The architecture is ARM."
-  DOCKER_IMG="serene4utobot/gpsrtk:galactic-ubuntu20.04"
+  DOCKER_IMG="serene4utobot/ros2_gnssrtk:galactic-ubuntu20.04"
 elif [[ $ARCH == *"x86_64"* ]]; then
   echo "The architecture is AMD."
-  DOCKER_IMG="serene4utobot/gpsrtk:galactic-ubuntu20.04-cuda"
+  DOCKER_IMG="serene4utobot/ros2_gnssrtk:galactic-ubuntu20.04-cuda"
 else
   echo "The architecture is neither ARM nor AMD."
   exit 1
