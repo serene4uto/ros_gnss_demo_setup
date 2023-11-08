@@ -52,5 +52,5 @@ for file in "$APP_DIR"/*.desktop; do
 done
 
 # Create guidebot_data symlink
-ln -s  /home/$USER/guidebot_data /home/$USER/Desktop
+ln -s  /home/$USER/gnss_log /home/$USER/Desktop
 
