@@ -13,7 +13,7 @@ for file in "$SCRIPTS_DIR"/*.sh; do
       desktop_file="$name.desktop"
   
       # Set the command to execute the script in a new terminal window
-      command="gnome-terminal -- bash -c 'bash $file; exec bash'"
+      command="bash -c 'bash $file; exec bash'"
   
       # Create the desktop launcher file
       echo "[Desktop Entry]" > "$desktop_file"
