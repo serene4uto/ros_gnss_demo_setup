@@ -7,7 +7,7 @@ for file in "$SCRIPTS_DIR"/*.sh; do
     # Get the name of the script file without the extension
     name=$(basename "${file%.sh}")
 
-    if [ "$name" = "run_gnss" ] || [ "$name" = "run_eval_u08" ] || [ "$name" = "run_eval_u0736" ] || [ "$name" = "run_eval_NavigationRate" ]; then
+    if [ "$name" = "run_gnss" ] || [ "$name" = "run_eval_u08" ] || [ "$name" = "run_eval_u0736" ] || [ "$name" = "run_eval_navrate" ]; then
 
       # Set the name of the desktop launcher file
       desktop_file="$name.desktop"
