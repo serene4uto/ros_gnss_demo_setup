@@ -13,8 +13,8 @@ for file in "$SCRIPTS_DIR"/*.sh; do
         || [ "$name" = "run_eval_navrate" ] \
         || [ "$name" = "stop_run" ] \
         || [ "$name" = "clean_log" ] \
-        || [ "$name" = "check_rtcm.sh" ] \
-        || [ "$name" = "update_app.sh" ]; then
+        || [ "$name" = "check_rtcm" ] \
+        || [ "$name" = "update_app" ]; then
 
       # Set the name of the desktop launcher file
       desktop_file="$name.desktop"
