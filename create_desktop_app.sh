@@ -14,6 +14,8 @@ for file in "$SCRIPTS_DIR"/*.sh; do
         || [ "$name" = "stop_run" ] \
         || [ "$name" = "clean_log" ] \
         || [ "$name" = "check_rtcm" ] \
+        || [ "$name" = "run_mapviz" ] \
+        || [ "$name" = "run_show_gps" ] \
         || [ "$name" = "update_app" ]; then
 
       # Set the name of the desktop launcher file
