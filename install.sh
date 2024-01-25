@@ -27,6 +27,10 @@ docker exec -it ros_gnss bash -c "cd ~ && mkdir -p ros_gnss_ws/src \
     && pip3 install -r rtcm_provider_ros/requirements.txt \
     && git clone -b gnss_eval https://github.com/serene4uto/ublox_gnss_ros.git \
     && pip3 install -r ublox_gnss_ros/requirements.txt \
+    && apt-get install -y ros-galactic-mapviz \
+                          ros-galactic-mapviz-plugins \
+                          ros-galactic-tile-map \
+                          ros-galactic-multires-image \
     && cd .. \
     && colcon build \
     && exit"
